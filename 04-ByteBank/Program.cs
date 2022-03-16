@@ -19,7 +19,17 @@ namespace _04_ByteBank
             //Console.WriteLine(contaDoGabriel.saldo);
 
             contaDoGabriel.Depositar(500);
-            Console.WriteLine(contaDoGabriel.saldo);
+
+            ContaCorrente contaDaVivian = new ContaCorrente();
+            contaDaVivian.nomeTitular = "Vivian";
+
+            contaDoGabriel.Transferir(500, contaDaVivian);
+            Console.WriteLine("Saldo Gabriel: " + contaDoGabriel.saldo);
+            Console.WriteLine("Saldo Vivian: " + contaDaVivian.saldo);
+
+            contaDaVivian.Transferir(250, contaDoGabriel);
+            Console.WriteLine("Saldo Gabriel: " + contaDoGabriel.saldo);
+            Console.WriteLine("Saldo Vivian: " + contaDaVivian.saldo);
 
             Console.ReadLine();
         }
