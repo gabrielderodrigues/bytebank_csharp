@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB7DF08F-17AA-4648-8871-7DBE3AA8FADB}</ProjectGuid>
+    <ProjectGuid>{E9DFDA06-E978-403B-8796-478119C6B6A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_04_ByteBank</RootNamespace>
-    <AssemblyName>04-ByteBank</AssemblyName>
+    <RootNamespace>_05_ByteBank</RootNamespace>
+    <AssemblyName>05-ByteBank</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
     <Compile Include="ContaCorrente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\05-ByteBank\05-ByteBank.csproj">
-      <Project>{E9DFDA06-E978-403B-8796-478119C6B6A3}</Project>
-      <Name>05-ByteBank</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
