@@ -4,27 +4,45 @@ namespace _06_ByteBank
 {
     public class ContaCorrente
     {
-        public Cliente titular;
-        public int numeroAgencia;
-        public int numeroConta;
+        public int Agencia { get; set; }
+        public int Numero { get; set; }
+        public Cliente titular { get; set; }
+
         private double saldo;
 
-        public double ObterSaldo()
+        public double Saldo
         {
-            return saldo;
+            get
+            {
+                return saldo;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+
+                saldo = value;
+            }
         }
 
-        public void DefinirSaldo(double saldo)
-        {
-            if (saldo < 0)
-            {
-                Console.WriteLine("Não foi possível definir um saldo.");
-            }
-            else
-            {
-                this.saldo = saldo;
-            }
-        }
+        //public double GetSaldo()
+        //{
+        //    return saldo;
+        //}
+
+        //public void SetSaldo(double saldo)
+        //{
+        //    if (saldo < 0)
+        //    {
+        //        Console.WriteLine("Não foi possível definir um saldo.");
+        //    }
+        //    else
+        //    {
+        //        this.saldo = saldo;
+        //    }
+        //}
 
         public void Sacar(double valor)
         {
