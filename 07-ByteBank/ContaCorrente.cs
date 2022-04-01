@@ -4,6 +4,12 @@ namespace _07_ByteBank
 {
     public class ContaCorrente
     {
+        public static int TotalDeContasCriadas 
+        { 
+            get; 
+            private set; 
+        }
+
         private int _agencia;
         public int Agencia 
         { 
@@ -23,6 +29,7 @@ namespace _07_ByteBank
         }
 
         public int Numero { get; set; }
+
         public Cliente titular { get; set; }
 
         private double _saldo;
@@ -64,6 +71,9 @@ namespace _07_ByteBank
         {
             Agencia = agencia;
             Numero = numero;
+
+            // Não é necessário o ContaCorrente
+            ContaCorrente.TotalDeContasCriadas++;
         }
 
         public void Sacar(double valor)
